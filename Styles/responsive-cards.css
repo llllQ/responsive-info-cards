@@ -23,26 +23,45 @@ body {
 
 main {
     padding-top: 20vh;
+    padding-bottom: 20vh;
     width: 50vw;
     margin: auto;
     min-height: 100vh;
     overflow: hidden;
 }
 
+
+/* Text Styling */
+.info-card .card-heading,.info-card .card-content {
+    color: var(--font-off-black);
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.4em;
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+.card-content {
+    font-size: 1em;
+}
+
+/* Grid Styling */
 .info-cards {
     width: 100%;
     display: grid;
     grid-column-gap: 10%;
     grid-row-gap: 10%;
-    /* grid-template-columns: "card card card";  */
     grid-template-columns: 1fr 1fr 1fr;
 }
 
+/* Card Styling */
 .info-card {
     width: 100%;
     display: inline-block;
     position: relative;
-    height: 45vh;
+    height: 100%;
     overflow: hidden;
     background-color: var(--bg-off-white);
     display: flex;
@@ -52,11 +71,7 @@ main {
     justify-content: space-between;
 }
 
-.info-card .card-heading,.info-card .card-content {
-    color: var(--font-off-black);
-    text-align: center;
-}
-
+/* Image Styling */
 .img-container {
     display: inline-block;
     position: relative;
@@ -86,19 +101,11 @@ main {
     .info-cards {
         grid-column-gap: 5%;
     }
-
-    .info-card {
-        height: 50vh;
-    }
 }
 
 @media screen and (max-width: 1500px) {
     main {
         width: 70vw;
-    }
-
-    .info-card {
-        height: 45vh;
     }
 }
 
@@ -106,19 +113,11 @@ main {
     main {
         width: 80vw;
     }
-
-    .info-card {
-        height: 45vh;
-    }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 900px) {
     main {
         width: 90vw;
-    }
-
-    .info-card {
-        height: 45vh;
     }
 }
 
@@ -127,7 +126,7 @@ main {
 @media screen and (max-width: 750px){
 
     main {
-        width: 50vw;
+        width: 60vw;
     }
 
     .info-cards {
@@ -136,17 +135,24 @@ main {
         grid-column-gap: 0%;
         grid-row-gap: 2%;
         grid-template-columns: 1fr;
-        margin: 30% 0% 30% 0%;
-    }
-
-    .info-card {
-        height: 40vh;
     }
 
     .img-container {
         align-self: center;
         width: 50%;
         padding-top: 50%;
+    }
+}
+
+@media screen and (max-width: 500px){
+    main {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 450px){
+    main {
+        width: 90%;
     }
 }
 
